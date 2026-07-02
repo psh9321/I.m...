@@ -1,0 +1,22 @@
+{
+  "name": "webpack",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "webpack --mode development -w --config webpack.js.config.js",
+    "build": "webpack --mode production -w --config webpack.js.config.js"
+  },
+  "dependencies": {
+    "css-loader": "^7.1.4",
+    "html-loader": "^5.1.0",
+    "mini-css-extract-plugin": "^2.10.2",
+    "sass": "^1.101.0",
+    "sass-loader": "^17.0.0",
+    "webpack": "^5.108.1",
+    "webpack-cli": "^7.1.0"
+  }
+}

@@ -1,0 +1,124 @@
+{
+  "posts": [
+    {
+      "isDelete": false,
+      "id": "1",
+      "title": "React Query 기본 개념",
+      "contents": "서버 상태를 효율적으로 가져오고 캐싱하는 방법을 정리합니다."
+    },
+    {
+      "isDelete": false,
+      "id": "2",
+      "title": "Infinite Query 시작하기",
+      "contents": "페이지 단위 데이터를 이어 붙여 무한 스크롤을 구현합니다."
+    },
+    {
+      "isDelete": false,
+      "id": "3",
+      "title": "json-server pagination",
+      "contents": "_page와 _per_page를 사용해 페이지네이션 응답을 확인합니다."
+    },
+    {
+      "isDelete": false,
+      "id": "4",
+      "title": "Ky 인스턴스 설정",
+      "contents": "prefixUrl과 공통 hook을 사용해 API 호출 코드를 정리합니다."
+    },
+    {
+      "isDelete": false,
+      "id": "5",
+      "title": "TypeScript 응답 타입",
+      "contents": "API 응답 구조에 맞춰 타입을 선언하고 안전하게 사용합니다."
+    },
+    {
+      "isDelete": false,
+      "id": "6",
+      "title": "Query Key 설계",
+      "contents": "캐시를 잘 나누기 위해 queryKey에 의미 있는 값을 넣습니다."
+    },
+    {
+      "isDelete": false,
+      "id": "7",
+      "title": "Loading 상태 처리",
+      "contents": "데이터를 가져오는 동안 사용자에게 적절한 피드백을 보여줍니다."
+    },
+    {
+      "isDelete": false,
+      "id": "8",
+      "title": "Error 상태 처리",
+      "contents": "요청 실패 상황을 화면과 콘솔에서 확인할 수 있게 만듭니다."
+    },
+    {
+      "isDelete": false,
+      "id": "9",
+      "title": "Next Page 계산",
+      "contents": "현재 페이지와 전체 개수를 기준으로 다음 페이지 여부를 판단합니다."
+    },
+    {
+      "isDelete": false,
+      "id": "10",
+      "title": "데이터 렌더링",
+      "contents": "pages 배열을 순회해 게시물 목록을 화면에 표시합니다."
+    },
+    {
+      "isDelete": false,
+      "id": "11",
+      "title": "버튼으로 더 보기",
+      "contents": "fetchNextPage를 버튼에 연결해 다음 목록을 불러옵니다."
+    },
+    {
+      "isDelete": false,
+      "id": "12",
+      "title": "스크롤 감지",
+      "contents": "IntersectionObserver로 하단 진입 시 자동 요청을 실행합니다."
+    },
+    {
+      "isDelete": false,
+      "id": "13",
+      "title": "캐시 시간 이해",
+      "contents": "staleTime과 gcTime의 차이를 예제로 살펴봅니다."
+    },
+    {
+      "isDelete": false,
+      "id": "14",
+      "title": "Refetch 전략",
+      "contents": "윈도우 포커스와 네트워크 재연결 시 refetch 동작을 조정합니다."
+    },
+    {
+      "isDelete": false,
+      "id": "15",
+      "title": "Mutation 맛보기",
+      "contents": "게시물 추가나 수정 같은 서버 변경 작업의 흐름을 확인합니다."
+    },
+    {
+      "isDelete": false,
+      "id": "16",
+      "title": "Optimistic Update",
+      "contents": "서버 응답 전 UI를 먼저 갱신하는 낙관적 업데이트를 연습합니다."
+    },
+    {
+      "isDelete": false,
+      "id": "17",
+      "title": "Devtools 사용",
+      "contents": "React Query Devtools로 캐시와 요청 상태를 눈으로 확인합니다."
+    },
+    {
+      "isDelete": false,
+      "id": "18",
+      "title": "API 함수 분리",
+      "contents": "컴포넌트에서 fetch 로직을 분리해 테스트하기 쉬운 구조로 만듭니다."
+    },
+    {
+      "isDelete": false,
+      "id": "19",
+      "title": "목록 UX 다듬기",
+      "contents": "빈 목록, 로딩, 더 이상 데이터 없음 상태를 자연스럽게 표현합니다."
+    },
+    {
+      "isDelete": false,
+      "id": "20",
+      "title": "마무리 체크리스트",
+      "contents": "요청 URL, 응답 타입, 페이지 계산이 맞는지 마지막으로 점검합니다."
+    }
+  ]
+}

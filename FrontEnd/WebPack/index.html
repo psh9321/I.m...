@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>web pack</title>
+    <style>
+        .hidden {
+            position: absolute;
+            top : -999%;
+            left: -999%;
+            width: 0;
+            height: 0;
+            opacity: 0;
+            z-index: -999;
+        }
+
+        article {
+            display: flex; 
+            align-items: center;
+            gap: 15px;
+        }
+
+        ul {
+            display: flex;
+            gap: 10px;
+            list-style: none;
+            padding: 0;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1 class="hidden">소개 페이지</h1>
+    <section>
+        <h2 class="hidden">섹션</h2>
+        <article>
+            <h2>유저 디스플레이 변경</h2>
+            <button data-display="btnDisplay">row 로 보기</button>
+        </article>
+        <article>
+            <h2>유저박스 display 변경</h2>
+            <ul data-display="btnColorList">
+                <li><button data-display="btnColor" value="red">빨간색</button></li>
+                <li><button data-display="btnColor" value="blue">파란색</button></li>
+                <li><button data-display="btnColor" value="green">초록색</button></li>
+                <li><button data-display="btnReset">초기화</button></li>
+            </ul>
+        </article>
+        <dl data-layout="user-info-box">
+            <dt data-data="name"></dt>
+            <dd data-data="job"></dd>
+            <dd data-data="annual"></dd>
+        </dl>
+    </section>
+    <script src="./js/bundler.min.js"></script>
+    <script src="./js/engine.js"></script>
+    <script>
+        Engine.Config.Init();
+    </script>
+</body>
+</html>

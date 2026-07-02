@@ -1,0 +1,1 @@
+let index2={Config:{isInit:!1,arr:[],Init(){this.isInit=!0,this.Set()},Set(){for(let i=0;i<5;i++)this.arr.push("index2-"+i)}}};// build date : 2026. 7. 2. 오후 9:14:34
