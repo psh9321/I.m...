@@ -9,10 +9,24 @@ export const UseMutation = () => {
     const { mutateAsync } = useMutation({
         mutationKey : ["mutation", "add"],
         mutationFn : (param : { title : string, contents : string }) => API_CLIENT_POST_POSTS_ADD(param),
+        /**
+         * mutation 이 성공적으로 완료된 직후 호출되는 콜백
+         * @param data mutationFn이 반환한 응답 데이터
+         * @param variables mutate() 호출 시 전달한 값
+         * @param onMutateResult onMutate()에서 반환한 값 (낙관적 업데이트 복구 등에 사용)
+         * @param context MutationFunctionContext (queryClient, mutationKey, meta 등)
+         */
         onSuccess(data, variables, onMutateResult, context) {
             context.client.invalidateQueries({queryKey : ["posts","list"]});
             navigation("/");
         },
+        /**
+         * mutation 실행 중 에러가 발생했을 때 호출되는 콜백
+         * @param error mutationFn에서 발생한 에러 객체
+         * @param variables mutate() 호출 시 전달한 값
+         * @param onMutateResult onMutate()에서 반환한 값 (낙관적 업데이트 복구 등에 사용)
+         * @param context MutationFunctionContext (queryClient, mutationKey, meta 등)
+         */
         onError(error, variables, onMutateResult, context) {
             alert("등록 실패")
         },
