@@ -4,8 +4,10 @@ import winstonDaily from "winston-daily-rotate-file"
 /** logs 디렉토리에 로그파일 저장 */
 const DIR = "logs";
 
+type LOG_TYPE = "info" | "error" | "warn" | "http" | "verbose" | "debug" | "silly";
+
 class Daily {
-    type : "info" | "error" | "warn";
+    type : LOG_TYPE;
     datePattern : string;
     format : winston.Logform.Format;
     dirname : string;
@@ -13,7 +15,7 @@ class Daily {
     maxFiles : number;
     zippedArchive : boolean;
 
-    constructor(type : "info" | "error" | "warn") {
+    constructor(type : LOG_TYPE) {
         this.type = type;
         this.datePattern = 'YYYY-MM-DD';
         this.format = this.Format();        
@@ -24,12 +26,13 @@ class Daily {
     }
 
     Format() {
+        
         return winston.format(info => { return info.level === this.type ? info : false })()
     }
 }
 
 const Logger = winston.createLogger({
-    // level : "debug",
+    level : "debug",
     // silent : false, /** Logger의 모든 로그 출력 및 저장을 비활성화할지 여부 */
     format : winston.format.combine(
         winston.format.timestamp({format : "YYYY.MM.DD HH:mm:ss"}),
@@ -42,7 +45,9 @@ const Logger = winston.createLogger({
     })),
     transports : [
         new winstonDaily(new Daily("info")),
-        new winstonDaily(new Daily("error"))
+        new winstonDaily(new Daily("error")),
+        new winstonDaily(new Daily("warn")),
+        new winstonDaily(new Daily("http"))
     ]
 })
 
@@ -55,5 +60,7 @@ Logger.add(
     })
 );
 
-Logger.info(`user info`, {name : "su hyun", job : "developer"})
-Logger.error(`logger error`)
+// Logger.info(`info 찍음`, {name : "111", job : "222"})
+// Logger.warn("주의 상황")
+// Logger.http("http log222")
+// Logger.error(`logger error222`)

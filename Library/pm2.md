@@ -24,7 +24,7 @@
             {
                 name: "text-server", /** 애플리케이션(서버) 이름 */
                 script: "index.js", /** 실행할 파일 및 명령어 */
-                cwd: "/usr/share/nginx/next-exhibition-backend", /** 애플리케이션을 실행할 기준 디렉토리 */
+                cwd: "desktop/my-project/test-backend", /** 애플리케이션을 실행할 기준 디렉토리 */
                 autorestart: true, /** 애플리케이션이 비정상 종료되면 자동으로 다시 실행할지 여부를 설정 */
                 watch: false, /** 파일 변경을 감지하여 자동으로 재시작할지 여부를 설정 */
 
