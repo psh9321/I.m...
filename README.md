@@ -1,5 +1,7 @@
 # 내가 사용해본, 실무 경험이 있는 라이브러리 및 기술 정리
 
+## NodeJs
+
 ## FrontEnd 
  - JavaScript
  - jQuery
@@ -19,6 +21,7 @@
  - AWS
  - NginX
  - Vercel
+ - Linux
 
 
 ## Library
@@ -37,6 +40,3 @@
  - pm2
  - uuid
  - zustand
-
-
-## NodeJs
