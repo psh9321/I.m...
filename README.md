@@ -5,7 +5,7 @@
 ## FrontEnd 
  - JavaScript
  - jQuery
- - SPA
+ - SPA (NextJs, React)
  - TypeScript
  - WebPack
  - 웹표준/웹접근성
