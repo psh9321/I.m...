@@ -1,6 +1,7 @@
 # async / await
  - async/await는 비동기(Asynchronous) 코드를 동기(Synchronous) 코드처럼 읽기 쉽게 작성할 수 있도록 제공되는 문법이다.
  - 내부적으로는 Promise를 기반으로 동작하며, Promise의 then(), catch()를 더 직관적으로 사용할 수 있게 해준다.
+ - then, catch 등을 사용해 콜백을 등록해 사용할수있다. 등록한 콜백들은 마이크로태스크 큐에서 실행된다
 
 
 ## 특징
