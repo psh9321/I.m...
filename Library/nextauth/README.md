@@ -26,6 +26,14 @@
     N->>U: 세션 쿠키 저장
 
 
+## 유의사항
+ - 환경변수에 NEXTAUTH_SECRET 이름으로 시크릿키를 둬야한다
+ - 팝업 형식으로 구현할 시 페이지를 구성하는 layout.tsx 를 하나더 만들어서 사용해야 한다.root layout 하나로 사용할 시 팝업형식을 구현할 수 없음
+
+
+## 소셜앱 설정 방법
+ - 로그인 callbackURL : /api/auth/callback/{{provider(naver, kakao, google)}}
+
 ## 기본템플릿 
 ```ts /** auth.ts */
     import NextAuth from "next-auth";
@@ -371,8 +379,3 @@ export interface CallbacksOptions<P = Profile, A = Account> {
         }        
     }
  ```
-
-### 환경변수에 NEXTAUTH_SECRET 이름으로 시크릿키를 둬야한다
-
-### 팝업 형식으로 구현할 시 페이지를 구성하는 layout.tsx 를 하나더 만들어서 사용하는게 좋다
- - root layout 하나로 사용할 시 팝업형식을 구현할 수 없음
